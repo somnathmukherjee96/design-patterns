@@ -66,32 +66,39 @@ public class Desktop {
         private String processor;
         private String motherboard;
 
-        public void setMonitor(String monitor) {
+        public Builder setMonitor(String monitor) {
             this.monitor = monitor;
+            return this;
         }
 
-        public void setKeyboard(String keyboard) {
+        public Builder setKeyboard(String keyboard) {
             this.keyboard = keyboard;
+            return this;
         }
 
-        public void setMouse(String mouse) {
+        public Builder setMouse(String mouse) {
             this.mouse = mouse;
+            return this;
         }
 
-        public void setSpeaker(String speaker) {
+        public Builder setSpeaker(String speaker) {
             this.speaker = speaker;
+            return this;
         }
 
-        public void setRam(String ram) {
+        public Builder setRam(String ram) {
             this.ram = ram;
+            return this;
         }
 
-        public void setProcessor(String processor) {
+        public Builder setProcessor(String processor) {
             this.processor = processor;
+            return this;
         }
 
-        public void setMotherboard(String motherboard) {
+        public Builder setMotherboard(String motherboard) {
             this.motherboard = motherboard;
+            return this;
         }
 
         public Desktop build(){

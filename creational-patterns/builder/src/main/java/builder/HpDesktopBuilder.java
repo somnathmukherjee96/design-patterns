@@ -1,44 +1,55 @@
 package builder;
 
 public class HpDesktopBuilder implements DesktopBuilder{
-    private final Desktop.Builder builder = new Desktop.Builder();
+    private final Desktop.Builder builder;
+
+    public HpDesktopBuilder() {
+        this.builder = new Desktop.Builder();
+    }
+
     @Override
-    public void buildMonitor() {
+    public DesktopBuilder buildMonitor() {
         builder.setMonitor("HP Monitor");
+        return this;
     }
 
     @Override
-    public void buildKeyBoard() {
+    public DesktopBuilder buildKeyBoard() {
         builder.setKeyboard("HP KeyBoard");
+        return this;
 
     }
 
     @Override
-    public void buildMouse() {
+    public DesktopBuilder buildMouse() {
         builder.setMouse("HP Mouse");
+        return this;
 
     }
 
     @Override
-    public void buildSpeaker() {
+    public DesktopBuilder buildSpeaker() {
         builder.setSpeaker("HP Speaker");
+        return this;
 
     }
 
     @Override
-    public void buildProcessor() {
+    public DesktopBuilder buildProcessor() {
         builder.setProcessor("HP Processor");
+        return this;
 
     }
 
     @Override
-    public void buildMotherboard() {
+    public DesktopBuilder buildMotherboard() {
         builder.setMotherboard("HP Motherboard");
+        return this;
 
     }
 
     @Override
-    public Desktop getBuilder() {
+    public Desktop build() {
         return builder.build();
     }
 }

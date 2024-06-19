@@ -6,12 +6,13 @@ public class DesktopDirector {
         this.desktopBuilder = desktopBuilder;
     }
     Desktop buildDesktop(){
-        desktopBuilder.buildMonitor();
-        desktopBuilder.buildMouse();
-        desktopBuilder.buildKeyBoard();
-        desktopBuilder.buildMotherboard();
-        desktopBuilder.buildProcessor();
-        desktopBuilder.buildSpeaker();
-        return desktopBuilder.getBuilder();
+        return desktopBuilder
+                .buildMonitor()
+                .buildMouse()
+                .buildKeyBoard()
+                .buildMotherboard()
+                .buildProcessor()
+                .buildSpeaker()
+                .build();
     }
 }

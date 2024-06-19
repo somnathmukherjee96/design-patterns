@@ -8,13 +8,13 @@ public class ClientApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ClientApplication.class, args);
-		DesktopDirector desktopDirector1 = new DesktopDirector(new DellDesktopBuilder());
-		DesktopDirector desktopDirector2 = new DesktopDirector(new HpDesktopBuilder());
+		DesktopDirector dellDirector = new DesktopDirector(new DellDesktopBuilder());
+		DesktopDirector hpDirector = new DesktopDirector(new HpDesktopBuilder());
 
-		Desktop desktop1 = desktopDirector1.buildDesktop();
-		desktop1.showSpec();
-		Desktop desktop2 = desktopDirector2.buildDesktop();
-		desktop2.showSpec();
+		Desktop dellDesktop = dellDirector.buildDesktop();
+		dellDesktop.showSpec();
+		Desktop hpDesktop = hpDirector.buildDesktop();
+		hpDesktop.showSpec();
 	}
 
 }

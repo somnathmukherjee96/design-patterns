@@ -13,7 +13,9 @@ objects without specifying their concrete classes.
 
 3. **Builder Pattern** - Builder pattern allows you to construct complex objects in  a step-by-step manner. By using builders, directors
 , and a well-defined product class you can maintain clean and moduler code, making it easy to create different variants of a product.
-   **Components of the Builder Pattern**
+   
+   **Components of the Builder Pattern** - 
+
 
    **Product (Desktop)**: The complex object that is being built.
 
