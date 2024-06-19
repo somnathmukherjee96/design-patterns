@@ -5,6 +5,7 @@ to create objects for you, so you(client) don't have to use the `new` keyword di
 type of object being created without changing the code that uses it.
 
 ![img_3.png](img_3.png)
+
 2. **Abstract Factory Design Pattern** - The Abstract Factory is a creational design pattern provides a way to create groups of related
 objects without specifying their concrete classes.
 
