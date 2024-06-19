@@ -1,5 +1,7 @@
 package com.factories.abstract_factory;
 
+import com.factories.abstract_factory.uifactory.Button;
+import com.factories.abstract_factory.uifactory.TextBox;
 import com.factories.abstract_factory.uifactory.UIFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,9 +11,11 @@ public class ClientApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ClientApplication.class, args);
-		UIFactory uiFactory = Factory.getUIFactory("WIN");
-		uiFactory.createButton().paint();
-		uiFactory.createTextBox().paint();
+		UIFactory uiFactory = GUIAbstractFactory.createUIFactory("WIN");
+		Button button = uiFactory.createButton();
+		TextBox textBox = uiFactory.createTextBox();
+		button.paint();
+		textBox.paint();
 	}
 
 }

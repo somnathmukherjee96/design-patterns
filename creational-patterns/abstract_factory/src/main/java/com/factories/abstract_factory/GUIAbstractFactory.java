@@ -2,13 +2,13 @@ package com.factories.abstract_factory;
 
 import com.factories.abstract_factory.uifactory.*;
 
-public class Factory {
+public class GUIAbstractFactory {
     private Button button;
     private TextBox textBox;
 
-    private Factory(){};
+    private GUIAbstractFactory(){};
 
-    public static UIFactory getUIFactory(String os){
+    public static UIFactory createUIFactory(String os){
         switch (os){
             case "WIN":
                 return new WindowsUIFactory();
