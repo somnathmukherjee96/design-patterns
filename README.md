@@ -45,3 +45,5 @@ How It Works:
  - ***Concrete Strategies (CreditCardPayment, PayPalPayment, BankTransferPayment)*** : These classes implement the PaymentStrategy interface, each providing its own algorithm for processing a payment.
  - ***Context (PaymentContext)*** : This class uses a PaymentStrategy to execute the payment. The strategy can be set at runtime, allowing the context to use different algorithms as needed.
  - ***Client (ClientApplication)*** : The client code demonstrates how to use the context and switch between different payment strategies dynamically.
+
+![img_5.png](img_5.png)
