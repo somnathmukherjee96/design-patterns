@@ -1,5 +1,5 @@
 # design-patterns
-**Creational Design Patterns**
+## Creational Design Patterns
 1. **Factory Design Pattern** - The Factory is a creational design pattern that simplifies object creation by using a special class(factory)
 to create objects for you, so you(client) don't have to use the `new` keyword directly. This makes it easier to change the
 type of object being created without changing the code that uses it.
@@ -33,3 +33,15 @@ pattern is useful when object creation is costly or complex.
 ![img.png](img.png)
 
 5. **Singleton Pattern** - The single design pattern is a creational design pattern that ensures a class has only one instance and provides a global point of access to this instance.
+
+
+## Behavioral Design Patterns
+
+1. **Strategy Design Pattern** - The Strategy Design Pattern is a behavioral design pattern that enables selecting an algorithm's behavior at runtime. Instead of implementing a single 
+algorithm directly, code receives runtime instructions about which of a family of algorithms to use.
+
+How It Works:
+ - Strategy Interface (PaymentStrategy): This interface defines the common method pay that all concrete strategies must implement.
+ - Concrete Strategies (CreditCardPayment, PayPalPayment, BankTransferPayment): These classes implement the PaymentStrategy interface, each providing its own algorithm for processing a payment.
+ - Context (PaymentContext): This class uses a PaymentStrategy to execute the payment. The strategy can be set at runtime, allowing the context to use different algorithms as needed.
+ - Client (ClientApplication): The client code demonstrates how to use the context and switch between different payment strategies dynamically.
