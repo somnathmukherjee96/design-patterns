@@ -27,4 +27,7 @@ objects without specifying their concrete classes.
 
    **Client (BuilderApplication)**: The class that initiates the building process through the Director.
 
-4. 
+4. **Prototype Pattern** - The prototype design pattern is a creational design pattern used to create new objects by copying an existing instance. This
+pattern is useful when object creation is costly or complex.
+
+![img.png](img.png)
