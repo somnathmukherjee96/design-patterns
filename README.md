@@ -41,7 +41,7 @@ pattern is useful when object creation is costly or complex.
 algorithm directly, code receives runtime instructions about which of a family of algorithms to use.
 
 How It Works:
- - Strategy Interface (PaymentStrategy): This interface defines the common method pay that all concrete strategies must implement.
- - Concrete Strategies (CreditCardPayment, PayPalPayment, BankTransferPayment): These classes implement the PaymentStrategy interface, each providing its own algorithm for processing a payment.
- - Context (PaymentContext): This class uses a PaymentStrategy to execute the payment. The strategy can be set at runtime, allowing the context to use different algorithms as needed.
- - Client (ClientApplication): The client code demonstrates how to use the context and switch between different payment strategies dynamically.
+ - ***Strategy Interface (PaymentStrategy)*** : This interface defines the common method pay that all concrete strategies must implement.
+ - ***Concrete Strategies (CreditCardPayment, PayPalPayment, BankTransferPayment)*** : These classes implement the PaymentStrategy interface, each providing its own algorithm for processing a payment.
+ - ***Context (PaymentContext)*** : This class uses a PaymentStrategy to execute the payment. The strategy can be set at runtime, allowing the context to use different algorithms as needed.
+ - ***Client (ClientApplication)*** : The client code demonstrates how to use the context and switch between different payment strategies dynamically.
