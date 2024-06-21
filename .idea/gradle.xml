@@ -37,6 +37,14 @@
           </set>
         </option>
       </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/creational-patterns/singleton" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/creational-patterns/singleton" />
+          </set>
+        </option>
+      </GradleProjectSettings>
     </option>
   </component>
 </project>

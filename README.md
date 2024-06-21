@@ -31,3 +31,5 @@ objects without specifying their concrete classes.
 pattern is useful when object creation is costly or complex.
 
 ![img.png](img.png)
+
+5. **Singleton Pattern** - The single design pattern is a creational design pattern that ensures a class has only one instance and provides a global point of access to this instance.
