@@ -47,3 +47,15 @@ How It Works:
  - ***Client (ClientApplication)*** : The client code demonstrates how to use the context and switch between different payment strategies dynamically.
 
 ![img_5.png](img_5.png)
+
+2. **Command Pattern** - Command is a behavioral design pattern that turns a request into a stand-alone object that contains all information about the request. This transformation lets you pass requests 
+as a method arguments, delay or queue a request’s execution, and support undoable operations. 
+
+How it works:
+  - ***Command Interface*** : Declares methods for executing and undoing operation.
+  - ***Concrete Command Classes*** : Implement the Command interface and define specific actions, including undo.
+  - ***Receiver*** : Performs the actual work requested by the command.
+  - ***Invoker*** : Stores and executes commands, and can undo the last command.
+  - ***Client*** : Configures the commands and receivers.
+
+![img_6.png](img_6.png)

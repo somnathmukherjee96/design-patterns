@@ -11,11 +11,10 @@ public class ClientApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ClientApplication.class, args);
-		UIFactory uiFactory = GUIAbstractFactory.createUIFactory("WIN");
-		Button button = uiFactory.createButton();
-		TextBox textBox = uiFactory.createTextBox();
+		UIFactory winFactory = GUIAbstractFactory.createUIFactory("WIN");
+		Button button = winFactory.createButton();
+		TextBox textBox = winFactory.createTextBox();
 		button.paint();
 		textBox.paint();
 	}
-
 }
