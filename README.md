@@ -64,3 +64,5 @@ How it works:
 
 1. **Facade Design Pattern** - The Facade design pattern is a structural design pattern that provides a simplified interface to a complex subsystem. It encapsulates the complexity of the subsystem by 
 providing a single interface that clients can use, thus making the subsystem easier to use and understand.
+2.  **Decorator Design Pattern** - The decorator design pattern is a structural design pattern used to extend or alter the functionality of objects at runtime by wrapping them in a series of decorators.
+It provides a flexible alternative to subclassing for extending functionality.
