@@ -59,3 +59,8 @@ How it works:
   - ***Client*** : Configures the commands and receivers.
 
 ![img_6.png](img_6.png)
+
+## Structural Design Patterns
+
+1. **Facade Design Pattern** - The Facade design pattern is a structural design pattern that provides a simplified interface to a complex subsystem. It encapsulates the complexity of the subsystem by 
+providing a single interface that clients can use, thus making the subsystem easier to use and understand.
