@@ -66,3 +66,12 @@ How it works:
 providing a single interface that clients can use, thus making the subsystem easier to use and understand.
 2.  **Decorator Design Pattern** - The decorator design pattern is a structural design pattern used to extend or alter the functionality of objects at runtime by wrapping them in a series of decorators.
 It provides a flexible alternative to subclassing for extending functionality.
+3.  **Observer Design Pattern** - The Observer design pattern is a behavioral design pattern that defines a one-to-many relationship between objects so that when one object(the observable/subject)
+changes state, all it's dependents(the observers) are notified automatically. This pattern is used to create a subscription mechanism to allow multiple objects to listen and react to events or changes
+in another object.
+
+Key Concepts of the Observer Pattern:
+ - ***Subject/Observable*** - The object that holds the state and notifies observers of changes.
+ - ***Observers*** - The objects that need to be notified when the subject's state changes.
+ - ***Decoupling*** - The pattern promotes loose coupling between the subject and its observers. The subject does not need to know the details of its observers.
+ - ***Dynamic Relationships*** - Observers can be added or removed at runtime.
