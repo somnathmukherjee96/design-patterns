@@ -1,10 +1,10 @@
 package com.som;
 
+import com.som.observable.IPhoneStockObservable;
 import com.som.observable.NewsAgency;
 import com.som.observable.Observable;
-import com.som.observer.MobileAppSubscribe;
-import com.som.observer.Observer;
-import com.som.observer.WebAppSubscribe;
+import com.som.observable.StockObservable;
+import com.som.observer.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -13,6 +13,8 @@ public class ClientApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ClientApplication.class, args);
+
+		//example1
 		NewsAgency newsAgency = new NewsAgency();
 
 		//create observers
@@ -35,6 +37,18 @@ public class ClientApplication {
 
 		System.out.println("Publishing third news update...");
 		newsAgency.setLatestNews("Latest news 3");
+
+		//example2
+
+		System.out.println("Iphone stock alert!");
+		NotificationAlertObserver emailAlertObserver = new EmailAlertObserver();
+		NotificationAlertObserver mobileAlertObserver = new MobileAlertObserver();
+
+		StockObservable iphoneStock = new IPhoneStockObservable();
+		iphoneStock.addObserver(emailAlertObserver);
+		iphoneStock.addObserver(mobileAlertObserver);
+		iphoneStock.setStock(20);
+
 	}
 
 }
