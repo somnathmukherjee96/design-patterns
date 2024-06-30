@@ -20,6 +20,14 @@
         </option>
       </GradleProjectSettings>
       <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/behavioral-patterns/state" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/behavioral-patterns/state" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$/behavioral-patterns/strategy" />
         <option name="modules">
           <set>

@@ -48,6 +48,8 @@ public class ClientApplication {
 		iphoneStock.addObserver(emailAlertObserver);
 		iphoneStock.addObserver(mobileAlertObserver);
 		iphoneStock.setStock(20);
+		iphoneStock.setStock(25);
+
 
 	}
 

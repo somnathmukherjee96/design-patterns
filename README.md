@@ -60,6 +60,9 @@ How it works:
 
 ![img_6.png](img_6.png)
 
+3. **State Design Pattern** - The State Design Pattern is a behavioral design pattern that allows an object to change its behavior when its internal state changes. This pattern is used to encapsulate the
+   various states that an object can be in and to delegate state-specific behavior to corresponding state objects.
+
 ## Structural Design Patterns
 
 1. **Facade Design Pattern** - The Facade design pattern is a structural design pattern that provides a simplified interface to a complex subsystem. It encapsulates the complexity of the subsystem by 
