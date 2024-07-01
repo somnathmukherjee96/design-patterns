@@ -1,16 +1,16 @@
 package com.som;
 
-public class Item {
-    ItemType type;
-    double price;
+public class Product {
+    private ProductType type;
+    private double price;
     private boolean soldOut;
 
 
-    public ItemType getType() {
+    public ProductType getType() {
         return type;
     }
 
-    public void setType(ItemType type) {
+    public void setType(ProductType type) {
         this.type = type;
     }
 

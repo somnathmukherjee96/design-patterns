@@ -1,6 +1,6 @@
 package com.som;
 
-public enum ItemType {
+public enum ProductType {
     COKE,
     PEPSI,
     JUICE,

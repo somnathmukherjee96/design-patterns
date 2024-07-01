@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Inventory {
-    Map<Integer, Item> inventory;
+    private Map<Integer, Product> inventory;
 
     public Inventory(int itemCount) {
         inventory = new HashMap<>(itemCount);
@@ -14,41 +14,42 @@ public class Inventory {
     private void initializeEmptyInventory(int itemCount) {
         int startCode = 101;
         for(int i=0;i< itemCount;i++){
-            Item item = new Item();
-            item.setSoldOut(true);
-            inventory.put(startCode, item);
+            Product product = new Product();
+            product.setSoldOut(true);
+            inventory.put(startCode, product);
             startCode++;
         }
     }
-    public Map<Integer, Item> getInventory() {
+    public Map<Integer, Product> getInventory() {
         return inventory;
     }
 
-    public void setInventory(Map<Integer, Item> inventory) {
+    public void setInventory(Map<Integer, Product> inventory) {
         this.inventory = inventory;
     }
 
-    public void addItem(Item item, int code) {
+    public void addItem(Product product, int code) {
         if(inventory.containsKey(code)){
-            Item item1 = inventory.get(code);
-            if(item1.isSoldOut()){
-                item1.setSoldOut(false);
-                inventory.put(code, item);
+            Product existingProduct = inventory.get(code);
+            if(existingProduct.isSoldOut()){
+                existingProduct.setSoldOut(false);
+                //replace with new Product
+                inventory.put(code, product);
             } else throw new UnsupportedOperationException("Already item is present");
         } else throw new IllegalArgumentException("Invalid code");
 
     }
 
-    public Item getItem(int code) throws Exception {
+    public Product getItem(int code) throws Exception {
         if(inventory.containsKey(code)){
-            Item item = inventory.get(code);
-            if(!item.isSoldOut()) return item;
+            Product product = inventory.get(code);
+            if(!product.isSoldOut()) return product;
             else throw new Exception("Item is sold out");
         }
         throw new IllegalArgumentException("Invalid code");
     }
     public void markItemSoldOut(int code){
-        Item item = inventory.get(code);
-        item.setSoldOut(true);
+        Product product = inventory.get(code);
+        product.setSoldOut(true);
     }
 }

@@ -37,8 +37,8 @@ public class ClientApplication {
 	}
 
 	private static void displayInventory(VendingMachine vendingMachine) {
-		Map<Integer, Item> inventory = vendingMachine.getInventory().getInventory();
-		for(Map.Entry<Integer, Item> item: inventory.entrySet()){
+		Map<Integer, Product> inventory = vendingMachine.getInventory().getInventory();
+		for(Map.Entry<Integer, Product> item: inventory.entrySet()){
 			System.out.println(item.getKey()+" --> "+item.getValue());
 		}
 	}
@@ -46,22 +46,22 @@ public class ClientApplication {
 	private static void fillUpInventory(VendingMachine vendingMachine) {
 		int starterCode=101;
 		for(int i=0;i< 10;i++){
-			Item item = new Item();
+			Product product = new Product();
 			if(i>=0 && i<3){
-				item.setType(ItemType.COKE);
-				item.setPrice(12.00);
+				product.setType(ProductType.COKE);
+				product.setPrice(12.00);
 			} else if(i>=3 && i<5){
-				item.setType(ItemType.PEPSI);
-				item.setPrice(9.00);
+				product.setType(ProductType.PEPSI);
+				product.setPrice(9.00);
 			} else if(i>=5 && i<7){
-				item.setType(ItemType.JUICE);
-				item.setPrice(13.00);
+				product.setType(ProductType.JUICE);
+				product.setPrice(13.00);
 			} else {
-				item.setType(ItemType.SODA);
-				item.setPrice(7.00);
+				product.setType(ProductType.SODA);
+				product.setPrice(7.00);
 			}
 			try{
-				vendingMachine.getInventory().addItem(item, starterCode++);
+				vendingMachine.getInventory().addItem(product, starterCode++);
 			}
 			catch (Exception e){
 				System.err.println(e.getMessage());

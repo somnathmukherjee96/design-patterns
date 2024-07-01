@@ -1,6 +1,6 @@
 package com.som.vendingstates;
 
-import com.som.Item;
+import com.som.Product;
 import com.som.VendingMachine;
 
 public class SelectionState implements State{
@@ -25,16 +25,16 @@ return;
 
     @Override
     public void chooseProduct(VendingMachine vendingMachine, int productCode) throws Exception {
-        Item item = vendingMachine.getInventory().getItem(productCode);
+        Product product = vendingMachine.getInventory().getItem(productCode);
         double paidByUser= vendingMachine.getTotalMoney();
-        System.out.println("Paid by the user - "+paidByUser+", Product Price "+item.getPrice());
-        if(paidByUser<item.getPrice()){
-            System.out.println("Insufficient Amount, Product price "+item.getPrice() + " and you paid "+paidByUser);
+        System.out.println("Paid by the user - "+paidByUser+", Product Price "+ product.getPrice());
+        if(paidByUser< product.getPrice()){
+            System.out.println("Insufficient Amount, Product price "+ product.getPrice() + " and you paid "+paidByUser);
             getRefund(vendingMachine);
             throw new Exception("Insufficient amount");
-        } else if(paidByUser>item.getPrice()){
-            System.out.println("You will be getting return "+(paidByUser - item.getPrice()));
-            getChange(paidByUser - item.getPrice());
+        } else if(paidByUser> product.getPrice()){
+            System.out.println("You will be getting return "+(paidByUser - product.getPrice()));
+            getChange(paidByUser - product.getPrice());
             vendingMachine.setVendingMachineState(new DispenseState(vendingMachine, productCode));
 
         }
