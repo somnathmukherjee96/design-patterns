@@ -7,4 +7,41 @@
       <module name="com.som.facade.test" target="17" />
     </bytecodeTargetLevel>
   </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="abstract_factory" options="-parameters" />
+      <module name="abstract_factory.main" options="-parameters" />
+      <module name="abstract_factory.test" options="-parameters" />
+      <module name="builder" options="-parameters" />
+      <module name="builder.main" options="-parameters" />
+      <module name="builder.test" options="-parameters" />
+      <module name="command" options="-parameters" />
+      <module name="command.main" options="-parameters" />
+      <module name="command.test" options="-parameters" />
+      <module name="decorator" options="-parameters" />
+      <module name="decorator.main" options="-parameters" />
+      <module name="decorator.test" options="-parameters" />
+      <module name="facade" options="-parameters" />
+      <module name="facade.main" options="-parameters" />
+      <module name="facade.test" options="-parameters" />
+      <module name="factory" options="-parameters" />
+      <module name="factory.main" options="-parameters" />
+      <module name="factory.test" options="-parameters" />
+      <module name="observer" options="-parameters" />
+      <module name="observer.main" options="-parameters" />
+      <module name="observer.test" options="-parameters" />
+      <module name="prototype" options="-parameters" />
+      <module name="prototype.main" options="-parameters" />
+      <module name="prototype.test" options="-parameters" />
+      <module name="singleton" options="-parameters" />
+      <module name="singleton.main" options="-parameters" />
+      <module name="singleton.test" options="-parameters" />
+      <module name="state" options="-parameters" />
+      <module name="state.main" options="-parameters" />
+      <module name="state.test" options="-parameters" />
+      <module name="strategy" options="-parameters" />
+      <module name="strategy.main" options="-parameters" />
+      <module name="strategy.test" options="-parameters" />
+    </option>
+  </component>
 </project>

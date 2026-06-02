@@ -17,7 +17,6 @@ public class HpDesktopBuilder implements DesktopBuilder{
     public DesktopBuilder buildKeyBoard() {
         builder.setKeyboard("HP KeyBoard");
         return this;
-
     }
 
     @Override
